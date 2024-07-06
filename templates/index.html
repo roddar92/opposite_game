@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Игра в противоположности</title>
+</head>
+<body>
+<div id="maindiv">
+    <div id="paragraph">
+        <p class="n">{{data['greeting']}}</p>
+    </div>
+    <button type="button" onclick="window.location.href='{{ url_for('game') }}';">Начать игру!</button>
+</div>
+</body>
+</html>

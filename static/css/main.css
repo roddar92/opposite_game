@@ -1,0 +1,63 @@
+.link-button {
+    background: none;
+    border: none;
+    color: #2B547E;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "courier new", courier, monospace;
+}
+
+.link-button:focus {
+    outline: none;
+}
+
+.link-button:active {
+    color: blue;
+}
+
+#maindiv{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#paragraph{
+    font-family: "courier new", courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+    color: #2B547E;
+}
+
+input{
+    width: 35%;
+    height: 50px;
+    border: 2px solid #C0C0C0;
+    border-radius: 15px;
+    background-color: #F8F8F8;
+    text-align: center;
+    font-family: "courier new";
+    font-size: 25px;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    font-family: "courier new";
+    font-size: 17px;
+    font-weight: bold;
+}
+
+button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+p.e{
+   color: #C0392B;
+}

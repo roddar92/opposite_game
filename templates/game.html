@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="противоположности" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Игра в города</title>
+    <script type="text/javascript">
+    function send_word() {
+        var input = document.getElementByName('clicked_word').value();
+        input.addEventListener("click", function(event) {
+            document.getElementById('wordform').submit();
+            return false;
+        });
+    }
+    </script>
+</head>
+<body>
+<div id="maindiv">
+    <div id="paragraph">
+        <p class="{{data['cls']}}">{{data['value']}}</p>
+        <p class="word">{{data['guessed']}}</p>
+    </div>
+    <form onsubmit="send_word()" id="wordform" class="word" action="/game" method="post">
+        {% for d in data['candidates'] %}
+            <button type="submit" name="clicked_word" value="{{d}}" class="link-button" onclick="send_word()">
+                {{d}}
+            </button>
+        {% endfor %}
+        <button type="submit" name="clicked_word" value="over" class="link-button" onclick="send_word()">
+            Закончить игру
+        </button>
+    </form>
+</div>
+</body>
+</html>
